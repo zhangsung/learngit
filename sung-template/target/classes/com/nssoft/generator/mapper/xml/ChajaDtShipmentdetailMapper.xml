@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nssoft.generator.mapper.ChajaDtShipmentdetailMapper" >
+  <resultMap id="BaseResultMap" type="com.nssoft.generator.model.ChajaDtShipmentdetail" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="shipment_no" property="shipment_no" jdbcType="VARCHAR" />
+    <id column="chaja_type" property="chaja_type" jdbcType="VARCHAR" />
+    <id column="factory_id" property="factory_id" jdbcType="VARCHAR" />
+    <id column="order_no" property="order_no" jdbcType="VARCHAR" />
+    <id column="color" property="color" jdbcType="VARCHAR" />
+    <result column="cn_group" property="cn_group" jdbcType="VARCHAR" />
+    <result column="classification" property="classification" jdbcType="VARCHAR" />
+    <result column="pcs" property="pcs" jdbcType="INTEGER" />
+    <result column="ctns" property="ctns" jdbcType="INTEGER" />
+    <result column="price" property="price" jdbcType="DECIMAL" />
+    <result column="amount" property="amount" jdbcType="DECIMAL" />
+    <result column="deposit" property="deposit" jdbcType="DECIMAL" />
+    <result column="ttl" property="ttl" jdbcType="DECIMAL" />
+    <result column="cbm" property="cbm" jdbcType="DECIMAL" />
+    <result column="nw" property="nw" jdbcType="DECIMAL" />
+    <result column="gw" property="gw" jdbcType="DECIMAL" />
+    <result column="exp" property="exp" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

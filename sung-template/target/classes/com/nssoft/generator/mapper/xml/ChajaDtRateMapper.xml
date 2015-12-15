@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nssoft.generator.mapper.ChajaDtRateMapper" >
+  <resultMap id="BaseResultMap" type="com.nssoft.generator.model.ChajaDtRate" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="scur" property="scur" jdbcType="VARCHAR" />
+    <id column="tcur" property="tcur" jdbcType="VARCHAR" />
+    <id column="reg_ts" property="reg_ts" jdbcType="DATE" />
+    <result column="rate" property="rate" jdbcType="DECIMAL" />
+    <result column="rate_nm" property="rate_nm" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

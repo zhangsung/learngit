@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+
+	<bean name="json" class="com.nssoft.view.JsonFormat">
+		<property name="contentType" value="application/json;charset=UTF-8" />
+	</bean>
+	
+	<bean name="xml" class="com.neighborsystem.durian.restapi.view.XmlFormat">
+		<property name="contentType" value="text/xml;charset=UTF-8" />
+		<property name="charset" value="UTF-8" />
+	</bean>
+	
+	<bean id="base.stringPool" class="com.neighborsystem.durian.pool.string.SbPool">
+		<constructor-arg index="0" type="int" value="100" />
+	</bean>
+	
+	<bean id="form" class="com.nssoft.view.JsonFormat">
+		<property name="contentType" value="text/html;charset=UTF-8" />
+    </bean>
+    
+	<bean id="download" class="com.nssoft.view.DownloadFormat">
+    </bean>
+    
+    <bean id="excel" class="com.nssoft.view.ExcelFormat">
+    		<property name="contentType" value="application/vnd.ms-excel" />
+	</bean>
+	
+	<bean id="zip" class="com.nssoft.view.ZipFormat">
+		<property name="contentType">
+			<value>application/x-zip-compressed</value>
+		</property>
+	</bean>
+	
+	<!-- <bean id="ViewResolver" class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+		<property name="order" value="1" />
+		<property name="defaultContentType" value="application/json;charset=UTF-8"/> 
+		<property name="contentNegotiationManager">
+			<bean class="org.springframework.web.accept.ContentNegotiationManager">
+				<constructor-arg>
+					<bean class="org.springframework.web.accept.PathExtensionContentNegotiationStrategy">
+						<constructor-arg>
+							<map>
+								<entry key="json" value="application/json;charset=UTF-8" />
+								<entry key="xml" value="text/xml;charset=UTF-8" />
+								<entry key="form" value="text/html;charset=UTF-8" />
+								<entry key="zip" value="application/x-zip-compressed" />
+								<entry key="excel" value="application/vnd.ms-exce" />
+								<entry key="download" value="text/xml;charset=UTF-8"/>
+							</map>
+						</constructor-arg>
+					</bean>
+				</constructor-arg>
+			</bean>
+		</property>
+		<property name="viewResolvers">
+			<list>
+				<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+					<property name="prefix" value="/WEB-INF/jsp/" />
+					<property name="suffix" value=".jsp" />
+				</bean>
+			</list>
+		</property>
+		<property name="defaultViews">
+			<list>
+				<ref bean="json" />
+				<ref bean="xml" />
+				<ref bean="form" />
+				<ref bean="zip" />
+				<ref bean="excel" />
+				<ref bean="download" />
+			</list>
+		</property>
+	</bean> -->
+</beans>

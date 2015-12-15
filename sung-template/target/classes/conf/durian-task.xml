@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans-3.2.xsd  http://www.springframework.org/schema/task  http://www.springframework.org/schema/task/spring-task-3.2.xsd">
+	
+	<!--Auto created by NeighborSystem plugin -->
+	
+	<!--###################### -->
+	<!--Spring Task(스케쥴러) -->
+	<!--###################### -->
+	
+	<!--Plugin을 통한 처리는 <task:scheduler/> <task:scheduled-tasks/> 가 하나여야 합니다. -->
+	
+	<!--Task bean의 constructor-arg index="1" 값을 true 로 지정할 경우 -->
+	<!--Mybatis Annotation을 사용한 com.neighborsystem.durian.task.table 의 createTaskTable() 실행 -->
+	<!--또는 아래 DDL 실행 -->
+	<!--CREATE TABLE T_TASKLOG (JOB_TRID VARCHAR(200) NOT NULL, START_TIME DATE NOT NULL, END_TIME DATE, ERROR_MSG VARCHAR2(1000), 
+		JOB_CLASS VARCHAR2(50), JOB_SERVER_NAME VARCHAR2(30)) -->
+	
+</beans>

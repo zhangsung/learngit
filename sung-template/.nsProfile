@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<neighbor>
+    <durian>
+        <path id="base" value="/src/main/webapp/WEB-INF/conf/"/>
+        <resource id="default" value="/src/main/webapp/WEB-INF/conf/durian-default.xml"/>
+        <resource id="jdbc" value="/src/main/webapp/WEB-INF/conf/durian-jdbc.xml"/>
+        <resource id="beans" value="/src/main/webapp/WEB-INF/conf/durian-beans.xml"/>
+        <resource id="task" value="/src/main/webapp/WEB-INF/conf/durian-task.xml"/>
+        <resource id="views" value="/src/main/webapp/WEB-INF/conf/durian-views.xml"/>
+        <resource id="api" value="/src/main/webapp/WEB-INF/conf/durian-api.xml"/>
+        <resource id="dbms_config" value="/src/main/webapp/WEB-INF/conf/dbms-config.xml"/>
+        <resource id="etc" value="/src/main/webapp/WEB-INF/conf/durian-etc.xml"/>
+    </durian>
+</neighbor>

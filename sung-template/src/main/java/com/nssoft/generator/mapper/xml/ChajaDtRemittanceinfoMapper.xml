@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nssoft.generator.mapper.ChajaDtRemittanceinfoMapper" >
+  <resultMap id="BaseResultMap" type="com.nssoft.generator.model.ChajaDtRemittanceinfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="remittance_id" property="remittance_id" jdbcType="VARCHAR" />
+    <id column="chaja_type" property="chaja_type" jdbcType="CHAR" />
+    <result column="remittance_date" property="remittance_date" jdbcType="DATE" />
+    <result column="customer_id" property="customer_id" jdbcType="VARCHAR" />
+    <result column="less_amount" property="less_amount" jdbcType="DECIMAL" />
+    <result column="shipment_ttl" property="shipment_ttl" jdbcType="DECIMAL" />
+    <result column="new_deposit" property="new_deposit" jdbcType="DECIMAL" />
+    <result column="ocs_amount" property="ocs_amount" jdbcType="DECIMAL" />
+    <result column="compensation_amount" property="compensation_amount" jdbcType="DECIMAL" />
+    <result column="sample_cost" property="sample_cost" jdbcType="DECIMAL" />
+    <result column="mould_cost" property="mould_cost" jdbcType="DECIMAL" />
+    <result column="handling_fee" property="handling_fee" jdbcType="DECIMAL" />
+    <result column="return_mould" property="return_mould" jdbcType="DECIMAL" />
+    <result column="balance" property="balance" jdbcType="DECIMAL" />
+    <result column="exp" property="exp" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

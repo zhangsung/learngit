@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nssoft.generator.mapper.ChajaDtInspectionsheetMapper" >
+  <resultMap id="BaseResultMap" type="com.nssoft.generator.model.ChajaDtInspectionsheet" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="order_no" property="order_no" jdbcType="VARCHAR" />
+    <id column="inspecter_date" property="inspecter_date" jdbcType="DATE" />
+    <result column="orginal_shipment_date" property="orginal_shipment_date" jdbcType="DATE" />
+    <result column="fty_name" property="fty_name" jdbcType="VARCHAR" />
+    <result column="item_no" property="item_no" jdbcType="VARCHAR" />
+    <result column="packing" property="packing" jdbcType="VARCHAR" />
+    <result column="inner_size" property="inner_size" jdbcType="VARCHAR" />
+    <result column="ctn_size" property="ctn_size" jdbcType="VARCHAR" />
+    <result column="inspecter_name" property="inspecter_name" jdbcType="VARCHAR" />
+    <result column="comments" property="comments" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

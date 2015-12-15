@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nssoft.generator.mapper.ChajaDtNewproductinfoMapper" >
+  <resultMap id="BaseResultMap" type="com.nssoft.generator.model.ChajaDtNewproductinfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="develop_no" property="develop_no" jdbcType="VARCHAR" />
+    <id column="reg_date" property="reg_date" jdbcType="DATE" />
+    <result column="order_yn" property="order_yn" jdbcType="CHAR" />
+    <result column="item_no_order" property="item_no_order" jdbcType="VARCHAR" />
+    <result column="supplier_id" property="supplier_id" jdbcType="VARCHAR" />
+    <result column="customer_id" property="customer_id" jdbcType="VARCHAR" />
+    <result column="category" property="category" jdbcType="VARCHAR" />
+    <result column="item_no" property="item_no" jdbcType="VARCHAR" />
+    <result column="item_nm" property="item_nm" jdbcType="VARCHAR" />
+    <result column="sign" property="sign" jdbcType="VARCHAR" />
+    <result column="delivery_date" property="delivery_date" jdbcType="DATE" />
+    <result column="material" property="material" jdbcType="VARCHAR" />
+    <result column="material_detail" property="material_detail" jdbcType="VARCHAR" />
+    <result column="product_size" property="product_size" jdbcType="VARCHAR" />
+    <result column="print_size" property="print_size" jdbcType="VARCHAR" />
+    <result column="pcs_packing1" property="pcs_packing1" jdbcType="VARCHAR" />
+    <result column="pcs_packing2" property="pcs_packing2" jdbcType="VARCHAR" />
+    <result column="pcs_packing3" property="pcs_packing3" jdbcType="VARCHAR" />
+    <result column="inner_packing1" property="inner_packing1" jdbcType="INTEGER" />
+    <result column="inner_packing2" property="inner_packing2" jdbcType="VARCHAR" />
+    <result column="inner_packing3" property="inner_packing3" jdbcType="VARCHAR" />
+    <result column="ctn_packing1" property="ctn_packing1" jdbcType="INTEGER" />
+    <result column="ctn_packing2" property="ctn_packing2" jdbcType="VARCHAR" />
+    <result column="dry_pcs" property="dry_pcs" jdbcType="VARCHAR" />
+    <result column="dry_box" property="dry_box" jdbcType="VARCHAR" />
+    <result column="dry_ctn" property="dry_ctn" jdbcType="VARCHAR" />
+    <result column="sample_price_rmb" property="sample_price_rmb" jdbcType="DECIMAL" />
+    <result column="sample_price_usd" property="sample_price_usd" jdbcType="DECIMAL" />
+    <result column="sample_price_paycnt" property="sample_price_paycnt" jdbcType="SMALLINT" />
+    <result column="sample_price_exp" property="sample_price_exp" jdbcType="VARCHAR" />
+    <result column="moq" property="moq" jdbcType="VARCHAR" />
+    <result column="moa" property="moa" jdbcType="VARCHAR" />
+    <result column="unitprice_cn_rmb" property="unitprice_cn_rmb" jdbcType="VARCHAR" />
+    <result column="unitprice_cn_usd" property="unitprice_cn_usd" jdbcType="VARCHAR" />
+    <result column="unitprice_cn_unit" property="unitprice_cn_unit" jdbcType="VARCHAR" />
+    <result column="unitprice_cn_exp" property="unitprice_cn_exp" jdbcType="VARCHAR" />
+    <result column="unitprice_fob1" property="unitprice_fob1" jdbcType="VARCHAR" />
+    <result column="unitprice_fob1_unit" property="unitprice_fob1_unit" jdbcType="VARCHAR" />
+    <result column="unitprice_fob2" property="unitprice_fob2" jdbcType="VARCHAR" />
+    <result column="unitprice_fob2_unit" property="unitprice_fob2_unit" jdbcType="VARCHAR" />
+    <result column="unitprice_fob_exp" property="unitprice_fob_exp" jdbcType="VARCHAR" />
+    <result column="mid_confirm_date" property="mid_confirm_date" jdbcType="DATE" />
+    <result column="modify_date" property="modify_date" jdbcType="DATE" />
+    <result column="modify_exp" property="modify_exp" jdbcType="VARCHAR" />
+    <result column="sample_result" property="sample_result" jdbcType="VARCHAR" />
+    <result column="exp" property="exp" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

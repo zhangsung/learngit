@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nssoft.generator.mapper.ChajaDtMemberinfoMapper" >
+  <resultMap id="BaseResultMap" type="com.nssoft.generator.model.ChajaDtMemberinfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="member_id" property="member_id" jdbcType="VARCHAR" />
+    <result column="company_id" property="company_id" jdbcType="VARCHAR" />
+    <result column="company_type" property="company_type" jdbcType="VARCHAR" />
+    <result column="nm" property="nm" jdbcType="VARCHAR" />
+    <result column="pw" property="pw" jdbcType="VARCHAR" />
+    <result column="gender" property="gender" jdbcType="CHAR" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="tel" property="tel" jdbcType="CHAR" />
+    <result column="birthday" property="birthday" jdbcType="DATE" />
+    <result column="reg_ts" property="reg_ts" jdbcType="TIMESTAMP" />
+    <result column="mod_ts" property="mod_ts" jdbcType="TIMESTAMP" />
+    <result column="last_login_ts" property="last_login_ts" jdbcType="TIMESTAMP" />
+    <result column="last_login_ip" property="last_login_ip" jdbcType="VARCHAR" />
+    <result column="login_limit_yn" property="login_limit_yn" jdbcType="CHAR" />
+    <result column="pw_fail_cnt" property="pw_fail_cnt" jdbcType="SMALLINT" />
+    <result column="active_yn" property="active_yn" jdbcType="CHAR" />
+    <result column="member_grade" property="member_grade" jdbcType="VARCHAR" />
+    <result column="identify_code" property="identify_code" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

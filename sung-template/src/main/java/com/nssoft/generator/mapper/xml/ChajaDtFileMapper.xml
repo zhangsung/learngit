@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nssoft.generator.mapper.ChajaDtFileMapper" >
+  <resultMap id="BaseResultMap" type="com.nssoft.generator.model.ChajaDtFile" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="file_id" property="file_id" jdbcType="VARCHAR" />
+    <id column="module_cd" property="module_cd" jdbcType="VARCHAR" />
+    <result column="module_no" property="module_no" jdbcType="VARCHAR" />
+    <result column="file_nm" property="file_nm" jdbcType="VARCHAR" />
+    <result column="file_path" property="file_path" jdbcType="VARCHAR" />
+    <result column="file_extension" property="file_extension" jdbcType="VARCHAR" />
+    <result column="file_content_type" property="file_content_type" jdbcType="VARCHAR" />
+    <result column="used_yn" property="used_yn" jdbcType="CHAR" />
+    <result column="upload_ts" property="upload_ts" jdbcType="BIGINT" />
+  </resultMap>
+</mapper>

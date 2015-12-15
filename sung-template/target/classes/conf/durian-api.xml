@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">
+
+	<bean id="/v1/api/test.*" class="com.nssoft.api.test.Test">
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	 </bean>
+	<!-- Test Sample -->
+	<bean name="/v1/api/test/sample/form.json" class="com.nssoft.api.test.sample.Form"> <property name="sqlSessionFactory" ref="sqlSessionFactory" /> </bean>
+	<bean name="/v1/api/test/sample/table.json" class="com.nssoft.api.test.sample.Table"> <property name="session" ref="sqlSession" /> </bean>
+	<bean name="/v1/api/test/sample/detail.json" class="com.nssoft.api.test.sample.Detail"> <property name="sqlSessionFactory" ref="sqlSessionFactory" /> </bean>
+	<bean name="/v1/api/test/sample/deleteRow.json" class="com.nssoft.api.test.sample.DeleteRow"> <property name="sqlSessionFactory" ref="sqlSessionFactory" /> </bean>
+	<bean name="/v1/api/test/sample/updateRow.json" class="com.nssoft.api.test.sample.UpdateRow"> <property name="sqlSessionFactory" ref="sqlSessionFactory" /> </bean>
+	<bean name="/v1/api/test/sample/download.download" class="com.nssoft.api.test.sample.DownLoad"> </bean>
+	<bean name="/v1/api/test/sample/excel.excel" class="com.nssoft.api.test.sample.Excel"> </bean>
+	<bean name="/v1/api/test/sample/fileupload.form" class="com.nssoft.api.test.sample.FileUpload"> </bean>
+	
+
+</beans>

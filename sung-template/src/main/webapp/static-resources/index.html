@@ -1,0 +1,530 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
+<html>
+<head>
+<title>数据表格</title>
+<link rel="shortcut icon" href="/lib/img/ico/icon-webIcon.ico" />
+<meta name="author" content="Double" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<script type="text/javascript" src="/lib/js/includeHead.js"></script>
+<script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<div class="defaultbox">
+				<div class="logo">
+					<a href="#"><img src="/lib/img/pic/pic_logo.png" alt="logo" /></a>
+				</div>
+				<div class="navi">
+					<a href="#">个人中心</a>
+				</div>
+			</div>
+			<div class="menuWrapper">
+				<div class="menuCnm">
+					<ul></ul>
+				</div>
+			</div>
+			<div class="subMenuWrapper">
+				<div class="subMenu"></div>
+			</div>
+		</div>
+		<div class="contents">
+			<div class="leftMenuWrapper">
+				<div class="leftTitle"></div>
+				<div class="leftMenu">
+					<ul></ul>
+				</div>
+			</div>
+			<div class="acticle">
+				<div class="location">
+					<p>
+						<a><img src="/lib/img/ico/ico_home.png" alt="home" /></a> 
+						<span><img src="/lib/img/ico/ico_navi.png" alt="&gt;" /></span>
+						<span>GRID</span>
+						<span><img src="/lib/img/ico/ico_navi.png" alt="&gt;" /></span>
+						<span class="fontS">grid</span>
+					</p>
+				</div>
+				<p class="acticleTitle"></p>
+				<div class="searchTilte">查询条件</div>
+				<div class="searchBtns">
+					<button class="btnPrimary" id="searchBtn">查询</button>
+				</div>
+				<form class="searchForm" id="searchForm">
+					<table class="horizontalTable">
+						<caption>查询条件</caption>
+						<colgroup>
+							<col width="100" />
+							<col width="429" />
+							<col width="100" />
+							<col width="" />
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>性别</th>
+								<td><select class="selectNormal" name="">
+										<option value="M">男</option>
+										<option value="F">女</option>
+								</select></td>
+								<th>姓名</th>
+								<td><input type="text" class="inputNormal" name="name" value="" /></td>
+							</tr>
+							<tr>
+								<th>出生日期</th>
+								<td colspan="3">
+									<input type="text" class="startDate" name="" value="" />- 
+									<input type="text" class="endDate" name="" value="" />
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+				<div class="membership">
+					<ul>
+						<li>总金额 : <span>0</span></li>
+						<li>| 总数量 : <span>0</span></li>
+					</ul>
+				</div>
+				<div class="searchBtns">
+					<button class="btnPrimary" id="delBtn">删除</button> 
+					<button class="btnPrimary" id="dldBtn">下载</button>
+				</div>
+				<table id="datagridExp"></table>
+				<div class="searchTilte">Source Code</div>
+				<div class="easyui-tabs">
+					<div title="html">
+						<pre class="sourceCode">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" &gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;数据表格&lt;/title&gt;
+&lt;link rel="shortcut icon" href="/lib/img/ico/icon-webIcon.ico" /&gt;
+&lt;meta name="author" content="Double" /&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+&lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /&gt;
+&lt;meta http-equiv="Pragma" content="no-cache" /&gt;
+&lt;meta http-equiv="Cache-Control" content="no-cache" /&gt;
+&lt;meta http-equiv="Expires" content="0" /&gt;
+&lt;script type="text/javascript" src="/lib/js/includeHead.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="index.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;div class="wrapper"&gt;
+		&lt;div class="header"&gt;
+			&lt;div class="defaultbox"&gt;
+				&lt;div class="logo"&gt;
+					&lt;a href="#"&gt;&lt;img src="/lib/img/pic/pic_logo.png" alt="logo" /&gt;&lt;/a&gt;
+				&lt;/div&gt;
+				&lt;div class="navi"&gt;
+					&lt;a href="#"&gt;个人中心&lt;/a&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class="menuWrapper"&gt;
+				&lt;div class="menuCnm"&gt;
+					&lt;ul&gt;&lt;/ul&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class="subMenuWrapper"&gt;
+				&lt;div class="subMenu"&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="contents"&gt;
+			&lt;div class="leftMenuWrapper"&gt;
+				&lt;div class="leftTitle"&gt;&lt;/div&gt;
+				&lt;div class="leftMenu"&gt;
+					&lt;ul&gt;&lt;/ul&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class="acticle"&gt;
+				&lt;div class="location"&gt;
+					&lt;p&gt;
+						&lt;a&gt;&lt;img src="/lib/img/ico/ico_home.png" alt="home" /&gt;&lt;/a&gt; 
+						&lt;span&gt;&lt;img src="/lib/img/ico/ico_navi.png" alt="&gt;" /&gt;&lt;/span&gt;
+						&lt;span&gt;GRID&lt;/span&gt;
+						&lt;span&gt;&lt;img src="/lib/img/ico/ico_navi.png" alt="&gt;" /&gt;&lt;/span&gt;
+						&lt;span class="fontS"&gt;grid&lt;/span&gt;
+					&lt;/p&gt;
+				&lt;/div&gt;
+				&lt;p class="acticleTitle"&gt;&lt;/p&gt;
+				&lt;div class="searchTilte"&gt;查询条件&lt;/div&gt;
+				&lt;div class="searchBtns"&gt;
+					&lt;button class="btnPrimary" id="searchBtn"&gt;查询&lt;/button&gt;
+				&lt;/div&gt;
+				&lt;form class="searchForm" id="searchForm"&gt;
+					&lt;table class="horizontalTable"&gt;
+						&lt;caption&gt;查询条件&lt;/caption&gt;
+						&lt;colgroup&gt;
+							&lt;col width="100" /&gt;
+							&lt;col width="429" /&gt;
+							&lt;col width="100" /&gt;
+							&lt;col width="" /&gt;
+						&lt;/colgroup&gt;
+						&lt;tbody&gt;
+							&lt;tr&gt;
+								&lt;th&gt;性别&lt;/th&gt;
+								&lt;td&gt;&lt;select class="selectNormal" name="gender"&gt;
+										&lt;option value="M" selected&gt;男&lt;/option&gt;
+										&lt;option value="F"&gt;女&lt;/option&gt;
+								&lt;/select&gt;&lt;/td&gt;
+								&lt;th&gt;电话&lt;/th&gt;
+								&lt;td&gt;&lt;input type="text" class="inputNormal" name="tel" value="" /&gt;&lt;/td&gt;
+							&lt;/tr&gt;
+							&lt;tr&gt;
+								&lt;th&gt;出生日期&lt;/th&gt;
+								&lt;td colspan="3"&gt;
+									&lt;input type="text" class="startDate" name="startDate" value="" /&gt;- 
+									&lt;input type="text" class="endDate" name="endDate" value="" /&gt;
+								&lt;/td&gt;
+							&lt;/tr&gt;
+						&lt;/tbody&gt;
+					&lt;/table&gt;
+				&lt;/form&gt;
+				&lt;div class="membership"&gt;
+					&lt;ul&gt;
+						&lt;li&gt;总金额 : &lt;span&gt;0&lt;/span&gt;&lt;/li&gt;
+						&lt;li&gt;| 总数量 : &lt;span&gt;0&lt;/span&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+				&lt;div class="searchBtns"&gt;
+					&lt;button class="btnPrimary" id="delBtn"&gt;删除&lt;/button&gt; 
+					&lt;button class="btnPrimary" id="dldBtn"&gt;下载&lt;/button&gt;
+				&lt;/div&gt;
+				&lt;table id="datagridExp"&gt;&lt;/table&gt;				
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	
+	&lt;!-- dialog --&gt;
+	&lt;div class="popupWrapper" id="dialogElement"&gt;
+		&lt;div class="aplPopupWrapper"&gt;
+			&lt;div class="aplPopupTitle"&gt;
+				&lt;div class="aplPopupTitleFont"&gt;详细信息&lt;/div&gt;
+				&lt;div class="aplPopupXbtn"&gt;&lt;a title="关闭"&gt;&lt;img src="/lib/img/btn/btn_popupX.png" alt="关闭"/&gt;&lt;/a&gt;&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;form&gt;
+				&lt;table class="popupTable" summary="弹框详情"&gt;
+					&lt;colgroup&gt;
+						&lt;col width="100"/&gt;
+						&lt;col width="249"/&gt;
+						&lt;col width="100"/&gt;
+						&lt;col width=""/&gt; 
+					&lt;/colgroup&gt;
+					&lt;tbody&gt;
+						&lt;tr&gt;
+							&lt;th&gt;text&lt;/th&gt;
+							&lt;td&gt;
+								I'm one piece of pure text.
+							&lt;/td&gt;
+							&lt;th&gt;startDate&lt;/th&gt;
+							&lt;td&gt;
+								&lt;input type="text" class="startDate" value="" /&gt;
+							&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;th&gt;startDate-endDate&lt;/th&gt;
+							&lt;td colspan="3"&gt;
+								&lt;input type="text" class="startDate" value="" /&gt; -
+								&lt;input type="text" class="endDate" value="" /&gt;
+							&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;th&gt;selectSmall&lt;/th&gt;
+							&lt;td&gt;
+								&lt;select class="selectSmall"&gt;
+									&lt;option value="M"&gt;男&lt;/option&gt;
+									&lt;option value="F"&gt;女&lt;/option&gt;
+								&lt;/select&gt;
+							&lt;/td&gt;
+							&lt;th&gt;inputSmall&lt;/th&gt;
+							&lt;td&gt;
+								&lt;input type="text" class="inputSmall" value="15689545686" /&gt;
+							&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;th&gt;selectNormal&lt;/th&gt;
+							&lt;td&gt;
+								&lt;select class="selectNormal"&gt;
+									&lt;option value="M"&gt;男&lt;/option&gt;
+									&lt;option value="F"&gt;女&lt;/option&gt;
+								&lt;/select&gt;
+							&lt;/td&gt;
+							&lt;th&gt;inputNormal&lt;span&gt;*&lt;/span&gt;&lt;/th&gt;
+							&lt;td&gt;
+								&lt;input type="text" class="inputNormal" value="15689545686" /&gt;
+							&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;th&gt;selectLarge&lt;/th&gt;
+							&lt;td colspan="3"&gt;
+								&lt;select class="selectLarge"&gt;
+									&lt;option value="M"&gt;男&lt;/option&gt;
+									&lt;option value="F"&gt;女&lt;/option&gt;
+								&lt;/select&gt;
+							&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;th&gt;inputLarge&lt;/th&gt;
+							&lt;td colspan="3"&gt;
+								&lt;input type="text" class="inputLarge" value="15689545686" /&gt;
+							&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;th&gt;textareaFit&lt;/th&gt;
+							&lt;td colspan="3"&gt;
+								&lt;textarea class="textareaFit"&gt;
+细节 1:  2014年7月23日, 注册ID 
+细节 2:  2015年8月15日, 修改信息&lt;/textarea&gt;
+							&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/tbody&gt;
+				&lt;/table&gt;
+			&lt;/form&gt;
+			&lt;div class="btnbox"&gt;
+				&lt;button class="btnPrimary btnEdit"&gt;编辑&lt;/button&gt;
+				&lt;button class="btnPrimary" id="okBtn"&gt;确认&lt;/button&gt;	
+				&lt;button class="btnPrimary btnCancel"&gt;取消&lt;/button&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+					</div>
+					<div title="javascript" style="padding: 5px;">
+        				<pre class="sourceCode">'use strict';
+
+$(function() {
+	
+	var datagridElement = '#datagridExp',
+ 	columns = [ {
+		field : 'ck',
+		checkbox : true
+	}, {
+		field : 'id',
+		title : 'id',
+		hidden : true
+	}, {
+		field : 'name',
+		title : 'name',
+		width : 100,
+		formatter : function(value, row, index) {
+			return '<a target="_blank" title="点击新开页面" href="detail.html">' + value + '</a>';
+		}
+	}, {
+		field : 'email',
+		title : 'email',
+		width : 100,
+		formatter : function(value, row, index) {
+			return '<a title="点击显示弹窗" onclick="$(\'#dialogElement\').showDialog();">' + value + '</a>';
+		}
+	}, {
+		field : 'birthday',
+		title : 'birthday',
+		width : 100,
+		sortable : true
+	}, {
+		field : 'tel',
+		title : 'tel',
+		width : 100
+	}, {
+		field : 'options',
+		title : '操作',
+		width : 30,
+		align : 'center',
+		formatter : function(value, row, index) {
+			return '&lt;button class="btnDefault btnSmall" onclick="confirmDialog(\'My email is ' + row.email + '\')"&gt;按钮&lt;/button&gt;';
+		}
+	} ],
+ 	options = {
+		url : '/v1/api/test/sample/table.json',
+		idField : 'id',
+		columns : [ columns ],
+		sortName : 'birthday',
+		sortOrder : 'desc',
+		pagination : true,
+		fitColumns : true,
+		crossPageSwitch : true
+	};
+	
+	//创建easyUI datagrid
+	$(datagridElement).datagridEasyUI(options); 
+	
+	//查询按钮
+	$('#searchBtn').click(function() { 
+		$(datagridElement).datagrid('load', serializeObject($('#searchForm')));
+	});
+	
+	//删除按钮
+	$('#delBtn').click(function() { 
+//		$(datagridElement).deleteRowsEasyUI();
+		var rows = $(datagridElement).datagrid('getChecked'), idField = $(datagridElement).datagrid('options').idField; 
+		if (rows.length) {
+			confirmDialog('确定要删除吗?', function() {
+				var ids = [];
+				for (var i=0; i&lt;rows.length; i++) {
+					ids.push(rows[i][idField]);
+				}
+				confirmDialog(ids);
+			});
+		} else {
+			confirmDialog('请选择要删除的数据。');
+		}
+	});
+	
+	//下载按钮
+	$('#dldBtn').click(function() { 
+		$(datagridElement).downloadFileEasyUI('*.excel', '#searchForm', '#dldBtn');
+	});
+	
+	//弹框确认按钮
+	$('#okBtn').click(function() { 
+		confirmDialog('点击确认查看alert提示框。', function() {
+			confirmDialog('点击确认关闭我哟。');
+		});
+	});
+	
+	//模拟赋值--datepicker, 实际赋值时根据具体情况
+	var today = new Date();
+	$('.endDate').val(formatDate(today));
+	today.setMonth(today.getMonth() - 6);
+	$('.startDate').val(formatDate(today));
+	
+	//创建jQueryUI datepicker
+	$('.startDate, .endDate').datepickerJQueryUI();
+	
+	
+//	$pageName.getData();
+});
+
+//请求体
+var $pageName = {
+	getData : function() {
+		var getData = new nssoft.openApi.getData.api();
+		getData.addParam('param', 'param');
+		getData.request({
+			method : 'POST',
+			async : false,
+			url : './ServiceAPI/auth/getSession.json'
+		});
+	}
+};
+
+//回调函数
+(function() {
+	$class('nssoft.openApi.getData.api').extend(nssoft.absAPI).define({
+		onSuccess : function(status, res) {
+			var result = res.result;
+			if (res.errCd === 0 && result && result.success) {
+				//do something
+				
+			} else {
+				confirmDialog(result.msg || res.errMsg);
+			}
+		},
+		onFail : function(status) {
+			confirmDialog('发生错误');
+		}
+	});
+}());
+</pre>
+        </div>
+	</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	<!-- dialog -->
+	<div class="popupWrapper" id="dialogElement">
+		<div class="aplPopupWrapper">
+			<div class="aplPopupTitle">
+				<div class="aplPopupTitleFont">详细信息</div>
+				<div class="aplPopupXbtn"><a title="关闭"><img src="/lib/img/btn/btn_popupX.png" alt="关闭"/></a></div>
+			</div>
+			<form>
+				<table class="popupTable" summary="弹框详情">
+					<colgroup>
+						<col width="100"/>
+						<col width="249"/>
+						<col width="100"/>
+						<col width=""/> 
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>ID</th>
+							<td>
+								<input type="text" class="inputNormal idField" name="idField" value="" />
+							</td>
+							<th>startDate</th>
+							<td>
+								<input type="text" class="startDate" value="" />
+							</td>
+						</tr>
+						<tr>
+							<th>startDate-endDate</th>
+							<td colspan="3">
+								<input type="text" class="startDate" value="" /> -
+								<input type="text" class="endDate" value="" />
+							</td>
+						</tr>
+						<tr>
+							<th>selectSmall</th>
+							<td>
+								<select class="selectSmall" name="selectSmall">
+									<option value="M">男</option>
+									<option value="F">女</option>
+								</select>
+							</td>
+							<th>inputSmall</th>
+							<td>
+								<input type="text" class="inputSmall" name="name" value="name" />
+							</td>
+						</tr>
+						<tr>
+							<th>selectNormal</th>
+							<td>
+								<select class="selectNormal">
+									<option value="M">男</option>
+									<option value="F">女</option>
+								</select>
+							</td>
+							<th>inputNormal<span>*</span></th>
+							<td>
+								<input type="text" class="inputNormal" name="email" value="email" />
+							</td>
+						</tr>
+						<tr>
+							<th>selectLarge</th>
+							<td colspan="3">
+								<select class="selectLarge" name="selectLarge">
+									<option value="M">男</option>
+									<option value="F">女</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th>inputLarge</th>
+							<td colspan="3">
+								<input type="text" class="inputLarge" name="inputLarge" value="" />
+							</td>
+						</tr>
+						<tr>
+							<th>textareaFit</th>
+							<td colspan="3">
+								<textarea class="textareaFit" name="textareaFit"></textarea>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+			<div class="btnbox">
+				<button class="btnPrimary btnEdit">编辑</button>
+				<button class="btnPrimary" id="okBtn">确认</button>	
+				<button class="btnPrimary btnCancel">取消</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

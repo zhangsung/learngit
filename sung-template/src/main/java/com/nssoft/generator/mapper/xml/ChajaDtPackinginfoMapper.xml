@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nssoft.generator.mapper.ChajaDtPackinginfoMapper" >
+  <resultMap id="BaseResultMap" type="com.nssoft.generator.model.ChajaDtPackinginfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="order_no" property="order_no" jdbcType="VARCHAR" />
+    <id column="color" property="color" jdbcType="VARCHAR" />
+    <result column="jan_code" property="jan_code" jdbcType="VARCHAR" />
+    <result column="inner_packing" property="inner_packing" jdbcType="INTEGER" />
+    <result column="pcs" property="pcs" jdbcType="INTEGER" />
+    <result column="pcs_stock" property="pcs_stock" jdbcType="INTEGER" />
+    <result column="ctns" property="ctns" jdbcType="INTEGER" />
+    <result column="ctns_stock" property="ctns_stock" jdbcType="INTEGER" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,25 @@
+/**
+ * 
+ * @functionName: 
+ * @Description:覆写validationEngine.jquery.css的部分class
+ * @author: Third
+ * @param:
+ */
+.formError {
+}
+
+.formError .formErrorContent {
+	background: #ee7c1a;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	-o-box-shadow: none;
+}
+
+.formError .formErrorArrow div {
+	background: #ee7c1a;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	-o-box-shadow: none;
+}

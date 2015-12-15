@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nssoft.generator.mapper.ChajaDtOrderinfoMapper" >
+  <resultMap id="BaseResultMap" type="com.nssoft.generator.model.ChajaDtOrderinfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="order_no" property="order_no" jdbcType="VARCHAR" />
+    <result column="order_date" property="order_date" jdbcType="DATE" />
+    <result column="customer_id" property="customer_id" jdbcType="VARCHAR" />
+    <result column="supplier_id" property="supplier_id" jdbcType="VARCHAR" />
+    <result column="item_no" property="item_no" jdbcType="VARCHAR" />
+    <result column="item_no_factory" property="item_no_factory" jdbcType="VARCHAR" />
+    <result column="item_nm" property="item_nm" jdbcType="VARCHAR" />
+    <result column="material" property="material" jdbcType="VARCHAR" />
+    <result column="ast_yn" property="ast_yn" jdbcType="CHAR" />
+    <result column="handling_fee" property="handling_fee" jdbcType="DECIMAL" />
+    <result column="handling_fee_payyn" property="handling_fee_payyn" jdbcType="CHAR" />
+    <result column="unitprice_cn" property="unitprice_cn" jdbcType="DECIMAL" />
+    <result column="unitprice_cn_unit" property="unitprice_cn_unit" jdbcType="CHAR" />
+    <result column="unitprice_cn_type" property="unitprice_cn_type" jdbcType="CHAR" />
+    <result column="unitprice_fob" property="unitprice_fob" jdbcType="DECIMAL" />
+    <result column="unitprice_unit" property="unitprice_unit" jdbcType="VARCHAR" />
+    <result column="category" property="category" jdbcType="VARCHAR" />
+    <result column="order_ctns" property="order_ctns" jdbcType="INTEGER" />
+    <result column="order_ctns_stock" property="order_ctns_stock" jdbcType="INTEGER" />
+    <result column="order_pcs_stock" property="order_pcs_stock" jdbcType="INTEGER" />
+    <result column="order_pcs" property="order_pcs" jdbcType="INTEGER" />
+    <result column="total_amount" property="total_amount" jdbcType="DECIMAL" />
+    <result column="total_amount_cn" property="total_amount_cn" jdbcType="DECIMAL" />
+    <result column="signback_nm" property="signback_nm" jdbcType="VARCHAR" />
+    <result column="signback_date" property="signback_date" jdbcType="DATE" />
+    <result column="inner_length" property="inner_length" jdbcType="DECIMAL" />
+    <result column="inner_width" property="inner_width" jdbcType="DECIMAL" />
+    <result column="inner_height" property="inner_height" jdbcType="DECIMAL" />
+    <result column="inner_size_unit" property="inner_size_unit" jdbcType="VARCHAR" />
+    <result column="box_length" property="box_length" jdbcType="DECIMAL" />
+    <result column="box_width" property="box_width" jdbcType="DECIMAL" />
+    <result column="box_height" property="box_height" jdbcType="DECIMAL" />
+    <result column="box_size_unit" property="box_size_unit" jdbcType="VARCHAR" />
+    <result column="unit_weight" property="unit_weight" jdbcType="VARCHAR" />
+    <result column="box_nw" property="box_nw" jdbcType="DECIMAL" />
+    <result column="box_gw" property="box_gw" jdbcType="DECIMAL" />
+    <result column="inner_nw" property="inner_nw" jdbcType="DECIMAL" />
+    <result column="inner_gw" property="inner_gw" jdbcType="DECIMAL" />
+    <result column="production" property="production" jdbcType="VARCHAR" />
+    <result column="pcs_packing1" property="pcs_packing1" jdbcType="VARCHAR" />
+    <result column="pcs_packing2" property="pcs_packing2" jdbcType="VARCHAR" />
+    <result column="pcs_packing3" property="pcs_packing3" jdbcType="VARCHAR" />
+    <result column="inner_packing1" property="inner_packing1" jdbcType="INTEGER" />
+    <result column="inner_packing2" property="inner_packing2" jdbcType="VARCHAR" />
+    <result column="inner_packing3" property="inner_packing3" jdbcType="VARCHAR" />
+    <result column="ctn_packing1" property="ctn_packing1" jdbcType="INTEGER" />
+    <result column="ctn_packing2" property="ctn_packing2" jdbcType="VARCHAR" />
+    <result column="dry_pcs" property="dry_pcs" jdbcType="VARCHAR" />
+    <result column="dry_box" property="dry_box" jdbcType="VARCHAR" />
+    <result column="dry_ctn" property="dry_ctn" jdbcType="VARCHAR" />
+    <result column="sign" property="sign" jdbcType="VARCHAR" />
+    <result column="pp_delivery_date" property="pp_delivery_date" jdbcType="DATE" />
+    <result column="inner_delivery_date" property="inner_delivery_date" jdbcType="DATE" />
+    <result column="qc_delivery_date" property="qc_delivery_date" jdbcType="DATE" />
+    <result column="bulk_delivery_date" property="bulk_delivery_date" jdbcType="DATE" />
+    <result column="factory_delivery_date" property="factory_delivery_date" jdbcType="DATE" />
+    <result column="delivery_date" property="delivery_date" jdbcType="DATE" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="notice" property="notice" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

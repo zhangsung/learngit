@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nssoft.generator.mapper.ChajaDtFactorystatdetailMapper" >
+  <resultMap id="BaseResultMap" type="com.nssoft.generator.model.ChajaDtFactorystatdetail" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="factory_id" property="factory_id" jdbcType="VARCHAR" />
+    <id column="shipment_no" property="shipment_no" jdbcType="VARCHAR" />
+    <result column="payable" property="payable" jdbcType="DECIMAL" />
+    <result column="paid" property="paid" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

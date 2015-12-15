@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nssoft.generator.mapper.ChajaCdCategoryMapper" >
+  <resultMap id="BaseResultMap" type="com.nssoft.generator.model.ChajaCdCategory" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="category_code" property="category_code" jdbcType="VARCHAR" />
+    <result column="code" property="code" jdbcType="VARCHAR" />
+    <result column="category_nm_cn" property="category_nm_cn" jdbcType="VARCHAR" />
+    <result column="category_nm_en" property="category_nm_en" jdbcType="VARCHAR" />
+    <result column="taxrefund_rate" property="taxrefund_rate" jdbcType="SMALLINT" />
+    <result column="exp" property="exp" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

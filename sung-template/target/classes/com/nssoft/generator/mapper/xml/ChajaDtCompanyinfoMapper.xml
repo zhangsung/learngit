@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nssoft.generator.mapper.ChajaDtCompanyinfoMapper" >
+  <resultMap id="BaseResultMap" type="com.nssoft.generator.model.ChajaDtCompanyinfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="company_id" property="company_id" jdbcType="VARCHAR" />
+    <id column="company_type" property="company_type" jdbcType="VARCHAR" />
+    <result column="nm_cn" property="nm_cn" jdbcType="VARCHAR" />
+    <result column="nm_cn_short" property="nm_cn_short" jdbcType="VARCHAR" />
+    <result column="nm_en" property="nm_en" jdbcType="VARCHAR" />
+    <result column="nm_en_short" property="nm_en_short" jdbcType="VARCHAR" />
+    <result column="address_cn" property="address_cn" jdbcType="VARCHAR" />
+    <result column="address_cn_short" property="address_cn_short" jdbcType="VARCHAR" />
+    <result column="address_en_short" property="address_en_short" jdbcType="VARCHAR" />
+    <result column="address_en" property="address_en" jdbcType="VARCHAR" />
+    <result column="bank_nm_cn" property="bank_nm_cn" jdbcType="VARCHAR" />
+    <result column="bank_nm_en" property="bank_nm_en" jdbcType="VARCHAR" />
+    <result column="bank_swift" property="bank_swift" jdbcType="VARCHAR" />
+    <result column="bank_address_cn" property="bank_address_cn" jdbcType="VARCHAR" />
+    <result column="bank_address_en" property="bank_address_en" jdbcType="VARCHAR" />
+    <result column="account_no" property="account_no" jdbcType="VARCHAR" />
+    <result column="tax_no" property="tax_no" jdbcType="VARCHAR" />
+    <result column="charger_nm_cn" property="charger_nm_cn" jdbcType="VARCHAR" />
+    <result column="charger_nm_en" property="charger_nm_en" jdbcType="VARCHAR" />
+    <result column="tel" property="tel" jdbcType="VARCHAR" />
+    <result column="fax" property="fax" jdbcType="VARCHAR" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="zipcode" property="zipcode" jdbcType="VARCHAR" />
+    <result column="invoice_address_cn" property="invoice_address_cn" jdbcType="VARCHAR" />
+    <result column="invoice_address_en" property="invoice_address_en" jdbcType="VARCHAR" />
+    <result column="exp" property="exp" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

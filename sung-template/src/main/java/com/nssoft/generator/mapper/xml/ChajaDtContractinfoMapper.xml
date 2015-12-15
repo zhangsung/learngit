@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nssoft.generator.mapper.ChajaDtContractinfoMapper" >
+  <resultMap id="BaseResultMap" type="com.nssoft.generator.model.ChajaDtContractinfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="contract_no" property="contract_no" jdbcType="CHAR" />
+    <result column="contract_type" property="contract_type" jdbcType="CHAR" />
+    <result column="chaja_type" property="chaja_type" jdbcType="VARCHAR" />
+    <result column="sign" property="sign" jdbcType="VARCHAR" />
+    <result column="sign_party" property="sign_party" jdbcType="VARCHAR" />
+    <result column="sign_date" property="sign_date" jdbcType="DATE" />
+    <result column="sign_address" property="sign_address" jdbcType="VARCHAR" />
+    <result column="term" property="term" jdbcType="VARCHAR" />
+    <result column="send_from_to" property="send_from_to" jdbcType="VARCHAR" />
+    <result column="total_amount" property="total_amount" jdbcType="DECIMAL" />
+    <result column="deposit_yn" property="deposit_yn" jdbcType="CHAR" />
+    <result column="deposit" property="deposit" jdbcType="DECIMAL" />
+    <result column="port_shipment" property="port_shipment" jdbcType="VARCHAR" />
+    <result column="exp" property="exp" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

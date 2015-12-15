@@ -1,0 +1,64 @@
+.datagrid {
+	clear: both;
+	border-top:2px solid #1c2e63;
+}
+div.datagrid-header div.datagrid-cell {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+div.datagrid-header table td {
+	border-style: solid;
+	background-color: #f8f8f8;
+	font-weight: bold;
+}
+div.datagrid-header table {
+	height: 35px;
+}
+div.datagrid-header {
+	height: 34px;
+}
+div.datagrid-body div.datagrid-cell a {
+	cursor: pointer;
+	color: #4a4a4a;
+}
+div.datagrid-body div.datagrid-cell a:hover {
+	text-decoration: underline;
+}
+div.datagrid-body div.datagrid-cell {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+div.datagrid-body table td {
+	border-style: solid;
+}
+div.datagrid-empty {
+	text-align: center;
+	margin-top: -12px;
+}
+div.datagrid-empty img {
+	width: 52px;
+	height: 83px;
+}
+div.datagrid-empty p {
+	font-size: 18px; 
+	padding-top: 2px;
+}
+.pagerButtons {
+	padding: 0 5px;
+}
+span.switchbutton-on {
+	 background: #4d75d0;
+	 color: #fff;
+}
+.easyui-datebox {
+	width: 80px;
+}
+span.datebox {
+	border: 1px solid #a7a7a7;
+}
+div.easyui-tabs {
+	clear: both;
+}
+div.easyui-tabs .tabs-panels .panel {
+	margin: 0 10px;
+}

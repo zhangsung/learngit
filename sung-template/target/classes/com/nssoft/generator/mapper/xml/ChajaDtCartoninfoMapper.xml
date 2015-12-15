@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nssoft.generator.mapper.ChajaDtCartoninfoMapper" >
+  <resultMap id="BaseResultMap" type="com.nssoft.generator.model.ChajaDtCartoninfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="order_no" property="order_no" jdbcType="VARCHAR" />
+    <result column="item_no" property="item_no" jdbcType="VARCHAR" />
+    <result column="item_nm" property="item_nm" jdbcType="VARCHAR" />
+    <result column="ctn_packing" property="ctn_packing" jdbcType="VARCHAR" />
+    <result column="inner_packing" property="inner_packing" jdbcType="VARCHAR" />
+    <result column="box_nw" property="box_nw" jdbcType="DECIMAL" />
+    <result column="box_gw" property="box_gw" jdbcType="DECIMAL" />
+    <result column="box_length" property="box_length" jdbcType="DECIMAL" />
+    <result column="box_width" property="box_width" jdbcType="DECIMAL" />
+    <result column="box_height" property="box_height" jdbcType="DECIMAL" />
+    <result column="box_size_unit" property="box_size_unit" jdbcType="VARCHAR" />
+    <result column="order_ctns" property="order_ctns" jdbcType="INTEGER" />
+    <result column="exp" property="exp" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

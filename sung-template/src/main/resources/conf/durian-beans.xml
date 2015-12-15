@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:cache="http://www.springframework.org/schema/cache"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+	http://www.springframework.org/schema/mvc
+	http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+	http://www.springframework.org/schema/cache   
+    http://www.springframework.org/schema/cache/spring-cache-3.2.xsd">
+
+	<!-- <mvc:interceptors>
+		<bean class="com.neighbor.interceptor.sampleInterceptor">
+			<property name="sqlSession" ref="sqlSession" />		</bean>
+	<mvc:interceptors> -->
+ 
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<value>locale/message</value>
+			</list>
+		</property>
+		<property name="defaultEncoding" value="UTF-8"/>
+		<property name="cacheSeconds" value="120"/>  
+	</bean> 
+	<bean id="messageSourceAccessor"
+		class="org.springframework.context.support.MessageSourceAccessor">
+		<constructor-arg ref="messageSource" />
+	</bean> 
+	<!--
+	 In *.java use example => DurianMessage.getMessage("PREFIX_MESSAGE");
+	 The [PREFIX_MESSAGE] message must be declared first in the '/resources/message_??.properties' file.	-->
+	<bean id="message"
+		class="com.neighborsystem.durian.utils.DurianMessage">
+		<property name="messageSourceAccessor" ref="messageSourceAccessor" />
+	</bean> 
+
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:durian.properties</value>
+			</list>
+		</property>
+		<property name="fileEncoding" value="UTF-8" />
+	</bean>
+	
+	<!-- SpringMVC在超出上传文件限制时，会抛出org.springframework.web.multipart.MaxUploadSizeExceededException -->  
+    <!-- 该异常是SpringMVC在检查上传的文件信息时抛出来的，而且此时还没有进入到Controller方法中 -->  
+    <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">  
+        <property name="exceptionMappings">  
+            <props>  
+                <!-- 遇到MaxUploadSizeExceededException异常时，自动跳转到/WEB-INF/error_fileupload.jsp页面 -->  
+                <prop key="org.springframework.web.multipart.MaxUploadSizeExceededException">WEB-INF/error_fileupload</prop>  
+                <!-- 处理其它异常(包括Controller抛出的) -->  
+                <prop key="java.lang.Throwable">/v1/api/error/error.json</prop>  
+                <prop key="org.springframework.web.HttpMediaTypeNotAcceptableException">/v1/api/error/error.json</prop> 
+                
+            </props>  
+        </property>  
+    </bean>  
+	
+	<!-- Spring View Resolver -->
+	<bean class="org.springframework.web.servlet.view.XmlViewResolver">
+		<property name="order" value="1" />
+		<property name="location" value="classpath:conf/durian-views.xml" />
+	</bean>
+	
+	<!-- swagger --> 
+	<!-- <bean class="com.nssoft.util.MySwaggerConfig" /> -->
+	
+	<!-- 缓存配置 -->
+	<!-- 启用缓存注解功能(请将其配置在Spring主配置文件中) -->
+	<!-- <cache:annotation-driven cache-manager="cacheManager" /> -->
+	
+	<!-- Spring自己的基于java.util.concurrent.ConcurrentHashMap实现的缓存管理器(该功能是从Spring3.1开始提供的) -->
+	<!-- <bean id="cacheManager" class="org.springframework.cache.support.SimpleCacheManager"> 
+	    <property name="caches"> <set> <bean name="myCache" class="org.springframework.cache.concurrent.ConcurrentMapCacheFactoryBean"/> 
+	    </set> </property> </bean> -->
+	
+	<!-- 若只想使用Spring自身提供的缓存器,则注释掉下面的两个关于Ehcache配置的bean,并启用上面的SimpleCacheManager即可 -->
+	<!-- Spring提供的基于的Ehcache实现的缓存管理器 -->
+	<!-- <bean id="cacheManagerFactory"
+	    class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+	    <property name="configLocation" value="classpath:ehcache.xml" />
+	</bean>
+	<bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager">
+	    <property name="cacheManager" ref="cacheManagerFactory" />
+	</bean> -->
+	
+	<!-- <bean id="springCacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager">
+        <property name="cacheManager" ref="ehcacheManager"/>
+    </bean>
+    
+    <bean id="ehcacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+        <property name="configLocation" value="classpath:ehcache-spring.xml"/>
+    </bean> -->
+	
+</beans>

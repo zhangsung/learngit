@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nssoft.generator.mapper.ChajaDtFinancestatMapper" >
+  <resultMap id="BaseResultMap" type="com.nssoft.generator.model.ChajaDtFinancestat" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="reg_date" property="reg_date" jdbcType="DATE" />
+    <result column="bank_balance" property="bank_balance" jdbcType="DECIMAL" />
+    <result column="trade_receivable" property="trade_receivable" jdbcType="DECIMAL" />
+    <result column="deposit" property="deposit" jdbcType="DECIMAL" />
+    <result column="stock" property="stock" jdbcType="DECIMAL" />
+    <result column="other_receivable" property="other_receivable" jdbcType="DECIMAL" />
+    <result column="permanent_assets" property="permanent_assets" jdbcType="DECIMAL" />
+    <result column="depreciation" property="depreciation" jdbcType="DECIMAL" />
+    <result column="trade_payable" property="trade_payable" jdbcType="DECIMAL" />
+    <result column="other_payable" property="other_payable" jdbcType="DECIMAL" />
+    <result column="taxes_payable" property="taxes_payable" jdbcType="DECIMAL" />
+    <result column="paid_in_capital" property="paid_in_capital" jdbcType="DECIMAL" />
+    <result column="current_year_profit" property="current_year_profit" jdbcType="DECIMAL" />
+    <result column="profit_split" property="profit_split" jdbcType="DECIMAL" />
+    <result column="total_receivable" property="total_receivable" jdbcType="DECIMAL" />
+    <result column="total_payable" property="total_payable" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

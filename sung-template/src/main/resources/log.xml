@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration
+xmlns:log4j='http://jakarta.apache.org/log4j/'>
+<appender name="stdout" class="org.apache.log4j.ConsoleAppender">
+	<layout class="org.apache.log4j.PatternLayout">
+		<param name="ConversionPattern" value="[WEB][%d{yyMMdd HH:mm:ss,SSS}] [%5p] [%t] (%F:%L) - %m%n"/>
+		<!--  <param name="ConversionPattern" value="%5p [%t] (%F:%L)- %m%n"/> -->
+	</layout>
+</appender>
+
+<appender name="rolling" class="org.apache.log4j.RollingFileAppender">
+	<param name="file" value="${nssoft.root}/WEB-INF/logs/durian_rolling.log" />
+	<param name="Append" value="true" />
+	<param name="Threshold" value="DEBUG" />
+	<param name="MaxFileSize" value="10MB" />
+	<param name="MaxBackupIndex" value="2" />
+	<!-- org.apache.log4j.HTMLLayout -->
+	<layout class="org.apache.log4j.PatternLayout">
+		<param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm:ss}] [%5p] [%t] (%F:%L) - %m%n"/>
+	</layout>
+</appender>
+
+<appender name="error" class="org.apache.log4j.RollingFileAppender">
+	<param name="file" value="${nssoft.root}/WEB-INF/logs/durian_error.log" />
+	<param name="Append" value="true" />
+	<param name="Threshold" value="ERROR" />
+	<param name="MaxFileSize" value="10MB" />
+	<param name="MaxBackupIndex" value="2" />
+	<!-- org.apache.log4j.HTMLLayout -->
+	<layout class="org.apache.log4j.PatternLayout">
+		<param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm:ss}] [%5p] [%t] (%F:%L) - %m%n"/>
+	</layout>
+</appender>
+
+<appender name="xml" class="org.apache.log4j.FileAppender">
+	<param name="file" value="log4jlog.xml" />
+	<param name="Append" value="true" />
+	<layout class="org.apache.log4j.xml.XMLLayout" />
+</appender>
+
+<logger name="com.ibatis">
+	<level value="DEBUG" />
+</logger>
+
+<root>
+	<priority value="DEBUG" />
+	<appender-ref ref="stdout" />
+	<appender-ref ref="rolling" />
+	<appender-ref ref="error" />
+</root>
+
+</log4j:configuration>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="common">
+ 	<cache type="org.mybatis.caches.ehcache.LoggingEhcache" />
+    <select id="getMenu" parameterType="Map" resultMap="MenuMap">
+    		SELECT 
+    			link,
+    			title
+    		FROM MENU_INFO
+    		WHERE parent_link IS NULL OR parent_link = ''
+    		ORDER BY menu_order
+    </select>
+    
+    <resultMap type="Map" id="MenuMap" >
+    		<id column="link" property="link"/>
+    		<result column="title" property="title"/>
+    		<association column="link" property="subMenu" select="getSubMenu"/> 
+    </resultMap>
+    
+    <select id="getSubMenu" parameterType="String" resultType="Map">
+    		SELECT
+    			link,
+    			title
+    		FROM MENU_INFO
+    		WHERE parent_link = #{link}
+    		ORDER BY menu_order
+    </select>
+</mapper>

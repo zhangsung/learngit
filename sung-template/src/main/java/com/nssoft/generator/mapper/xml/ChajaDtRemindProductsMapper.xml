@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nssoft.generator.mapper.ChajaDtRemindProductsMapper" >
+  <resultMap id="BaseResultMap" type="com.nssoft.generator.model.ChajaDtRemindProducts" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="reg_dt" property="reg_dt" jdbcType="DATE" />
+    <id column="msg_type" property="msg_type" jdbcType="VARCHAR" />
+    <id column="develop_no" property="develop_no" jdbcType="VARCHAR" />
+    <id column="reg_date" property="reg_date" jdbcType="DATE" />
+    <result column="sign" property="sign" jdbcType="VARCHAR" />
+    <result column="url" property="url" jdbcType="VARCHAR" />
+    <result column="confirm_yn" property="confirm_yn" jdbcType="CHAR" />
+    <result column="express_record_no" property="express_record_no" jdbcType="VARCHAR" />
+    <result column="sign_email" property="sign_email" jdbcType="VARCHAR" />
+    <result column="item_no" property="item_no" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

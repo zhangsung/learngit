@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nssoft.generator.mapper.ChajaDtShipmentCninvoiceMapper" >
+  <resultMap id="BaseResultMap" type="com.nssoft.generator.model.ChajaDtShipmentCninvoice" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="shipment_no" property="shipment_no" jdbcType="VARCHAR" />
+    <id column="chaja_type" property="chaja_type" jdbcType="VARCHAR" />
+    <id column="cn_group" property="cn_group" jdbcType="VARCHAR" />
+    <result column="invoice_no" property="invoice_no" jdbcType="CHAR" />
+    <result column="print_yn" property="print_yn" jdbcType="CHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nssoft.generator.mapper.ChajaDtExpressrecordMapper" >
+  <resultMap id="BaseResultMap" type="com.nssoft.generator.model.ChajaDtExpressrecord" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="express_record_no" property="express_record_no" jdbcType="VARCHAR" />
+    <result column="express_type" property="express_type" jdbcType="VARCHAR" />
+    <result column="reg_date" property="reg_date" jdbcType="DATE" />
+    <result column="sender_id" property="sender_id" jdbcType="VARCHAR" />
+    <result column="sender_nm" property="sender_nm" jdbcType="VARCHAR" />
+    <result column="sender_addr" property="sender_addr" jdbcType="VARCHAR" />
+    <result column="sender_tel" property="sender_tel" jdbcType="VARCHAR" />
+    <result column="sender_fax" property="sender_fax" jdbcType="VARCHAR" />
+    <result column="receiver_id" property="receiver_id" jdbcType="VARCHAR" />
+    <result column="receiver_nm" property="receiver_nm" jdbcType="VARCHAR" />
+    <result column="receiver_addr" property="receiver_addr" jdbcType="VARCHAR" />
+    <result column="receiver_tel" property="receiver_tel" jdbcType="VARCHAR" />
+    <result column="receiver_fax" property="receiver_fax" jdbcType="VARCHAR" />
+    <result column="express_to" property="express_to" jdbcType="VARCHAR" />
+    <result column="express_from" property="express_from" jdbcType="VARCHAR" />
+    <result column="express_no" property="express_no" jdbcType="VARCHAR" />
+    <result column="mail_item_no" property="mail_item_no" jdbcType="VARCHAR" />
+    <result column="shipped_per" property="shipped_per" jdbcType="VARCHAR" />
+    <result column="terms_of_payment" property="terms_of_payment" jdbcType="VARCHAR" />
+    <result column="remarks" property="remarks" jdbcType="VARCHAR" />
+    <result column="total_quantity" property="total_quantity" jdbcType="INTEGER" />
+    <result column="total_amount" property="total_amount" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

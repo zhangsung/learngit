@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nssoft.generator.mapper.ChajaDtRemindinfoMapper" >
+  <resultMap id="BaseResultMap" type="com.nssoft.generator.model.ChajaDtRemindinfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="reg_dt" property="reg_dt" jdbcType="DATE" />
+    <id column="msg_type" property="msg_type" jdbcType="VARCHAR" />
+    <result column="confirm_msg" property="confirm_msg" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

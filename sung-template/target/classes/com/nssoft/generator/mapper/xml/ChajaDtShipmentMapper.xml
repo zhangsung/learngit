@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nssoft.generator.mapper.ChajaDtShipmentMapper" >
+  <resultMap id="BaseResultMap" type="com.nssoft.generator.model.ChajaDtShipment" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="shipment_no" property="shipment_no" jdbcType="VARCHAR" />
+    <result column="customer_id" property="customer_id" jdbcType="VARCHAR" />
+    <result column="shipment_date" property="shipment_date" jdbcType="DATE" />
+    <result column="per_vessel" property="per_vessel" jdbcType="VARCHAR" />
+    <result column="lc_no" property="lc_no" jdbcType="VARCHAR" />
+    <result column="send_addr" property="send_addr" jdbcType="VARCHAR" />
+    <result column="destination" property="destination" jdbcType="VARCHAR" />
+    <result column="delivery_terms" property="delivery_terms" jdbcType="VARCHAR" />
+    <result column="sailing_date" property="sailing_date" jdbcType="DATE" />
+    <result column="container_no" property="container_no" jdbcType="VARCHAR" />
+    <result column="seal_no" property="seal_no" jdbcType="VARCHAR" />
+    <result column="taxing_date" property="taxing_date" jdbcType="DATE" />
+    <result column="taxed_date" property="taxed_date" jdbcType="DATE" />
+    <result column="taxrefund_status" property="taxrefund_status" jdbcType="VARCHAR" />
+    <result column="handling_charge_param" property="handling_charge_param" jdbcType="INTEGER" />
+    <result column="handling_charge" property="handling_charge" jdbcType="DECIMAL" />
+    <result column="taxrefund_amount" property="taxrefund_amount" jdbcType="DECIMAL" />
+    <result column="exp" property="exp" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

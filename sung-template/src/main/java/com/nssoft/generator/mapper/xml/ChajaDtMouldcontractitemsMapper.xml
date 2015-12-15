@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nssoft.generator.mapper.ChajaDtMouldcontractitemsMapper" >
+  <resultMap id="BaseResultMap" type="com.nssoft.generator.model.ChajaDtMouldcontractitems" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="contract_no" property="contract_no" jdbcType="CHAR" />
+    <id column="item_no" property="item_no" jdbcType="VARCHAR" />
+    <result column="item_no_factory" property="item_no_factory" jdbcType="VARCHAR" />
+    <result column="exp" property="exp" jdbcType="VARCHAR" />
+    <result column="unitprice" property="unitprice" jdbcType="DECIMAL" />
+    <result column="unitprice_unit" property="unitprice_unit" jdbcType="CHAR" />
+    <result column="term" property="term" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

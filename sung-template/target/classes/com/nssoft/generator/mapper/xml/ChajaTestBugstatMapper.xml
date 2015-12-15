@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nssoft.generator.mapper.ChajaTestBugstatMapper" >
+  <resultMap id="BaseResultMap" type="com.nssoft.generator.model.ChajaTestBugstat" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="reg_ts" property="reg_ts" jdbcType="TIMESTAMP" />
+    <result column="url" property="url" jdbcType="VARCHAR" />
+    <result column="domain" property="domain" jdbcType="VARCHAR" />
+    <result column="navigator" property="navigator" jdbcType="VARCHAR" />
+    <result column="content" property="content" jdbcType="VARCHAR" />
+    <result column="submit_nm" property="submit_nm" jdbcType="VARCHAR" />
+    <result column="solve_yn" property="solve_yn" jdbcType="CHAR" />
+    <result column="ignore_yn" property="ignore_yn" jdbcType="CHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nssoft.generator.mapper.ChajaDtBalanceContractsMapper" >
+  <resultMap id="BaseResultMap" type="com.nssoft.generator.model.ChajaDtBalanceContracts" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="remittance_id" property="remittance_id" jdbcType="VARCHAR" />
+    <id column="contract_no" property="contract_no" jdbcType="CHAR" />
+    <result column="deposit_balance" property="deposit_balance" jdbcType="DECIMAL" />
+    <result column="contract_balance" property="contract_balance" jdbcType="DECIMAL" />
+    <result column="exp" property="exp" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>
